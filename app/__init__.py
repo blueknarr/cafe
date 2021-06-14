@@ -16,7 +16,7 @@ def create_app(database_name='cafe'):
     global db
     db = client.get_database(database_name)
 
-    from app.views import main,api
+    from app.views import main, api
     app.register_blueprint(main.bp)
     app.register_blueprint(api.bp)
 

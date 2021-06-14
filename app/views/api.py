@@ -31,3 +31,25 @@ def login():
         return jsonify({'result': 'success', 'token': token})
     else:
         return jsonify({'result': 'failed'})
+
+
+@bp.route('/register', methods=['POST'])
+def register():
+    id_register = request.form['id']
+    pw_register = request.form['pw']
+    place_register = request.form['place']
+
+    pw_hash = hashlib.sha256(pw_register.encode()).hexdigest()
+    db.users.insert_one({'id': id_register, 'pw': pw_hash, 'place': place_register})
+
+    return jsonify({'result': 'success', 'msg': '회원 가입을 축하합니다.'})
+
+
+@bp.route('/checkId', methods=['POST'])
+def check_id():
+    id_check = request.form['id']
+
+    if db.users.find_one({'id': id_check}, {'_id': False}):
+        return jsonify({'result': 'failed', 'msg': '사용중인 아이디입니다.'})
+    else:
+        return jsonify({'result': 'success', 'msg': '사용 가능한 아이디입니다.'})
