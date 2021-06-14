@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 from app import db
 
 bp = Blueprint(
@@ -10,4 +10,11 @@ bp = Blueprint(
 
 @bp.route('', methods=['GET'])
 def index():
-    return render_template('index.html')
+    token = request.cookies.get('loginToken')
+    login = False
+    if token:
+        print('token true')
+        login = True
+    else:
+        print('token false')
+    return render_template('index.html', login=login)

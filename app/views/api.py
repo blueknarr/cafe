@@ -52,4 +52,4 @@ def check_id():
     if db.users.find_one({'id': id_check}, {'_id': False}):
         return jsonify({'result': 'failed', 'msg': '사용중인 아이디입니다.'})
     else:
-        return jsonify({'result':'success','msg':'사용 가능한 아이디입니다.'})
+        return jsonify({'result': 'success', 'msg': '사용 가능한 아이디입니다.'})
