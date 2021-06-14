@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 쿠키 사용을 위한 Jquery-cookie 임포트 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+
+    <script>
+        function login() {
+            alert('login')
+            let id = $('#userId').val();
+            let pw = $('#userPw').val();
+            $.ajax({
+                type: "POST",
+                url: "/api/login",
+                data: {'id': id, 'pw': pw},
+                success: function (response) {
+                    if (response['result'] === 'success') {
+                        alert('success')
+                        $.cookie('loginToken', response['token']);
+                        window.location.href = '/'
+                    } else {
+                        alert("아이디와 패스워드를 확인해주세요.")
+                    }
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="header-d1"></div>
+        <div class="header-d2">
+
+        </div>
+        <div class="header-d3">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    계정
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item">회원가입</a>
+                    <a class="dropdown-item" data-toggle="modal" data-target="#loginModalCenter">로그인</a>
+                </div>
+                <!-- loginModal -->
+                <div class="modal fade" id="loginModalCenter" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">로그인</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <input type="text" class="input-login" id="userId" placeholder="아이디를 입력하세요.">
+                                </div>
+                                <div>
+                                    <input type="password" class="input-login" id="userPw" placeholder="비밀번호를 입력하세요.">
+                                </div>
+                                </div>
+                            <div class="modal-footer">
+<!--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>-->
+                                <button type="button" class="btn btn-primary btn-login" onclick="login()">로그인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+    </nav>
+    <section>
+
+    </section>
+    <footer>
+
+    </footer>
+</div>
+</body>
+</html>
