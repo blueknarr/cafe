@@ -24,3 +24,8 @@ def index():
 @bp.route('/storePage', methods=['GET'])
 def store():
     return render_template('storeList.html')
+
+
+@bp.route('/storeDetails', methods=['GET'])
+def detail():
+    return render_template('storeDetail.html')
