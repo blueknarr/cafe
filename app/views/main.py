@@ -1,4 +1,5 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, make_response
+
 from app import db
 
 bp = Blueprint(
@@ -18,3 +19,13 @@ def index():
     else:
         print('token false')
     return render_template('index.html', login=login)
+
+
+@bp.route('/storePage', methods=['GET'])
+def store():
+    return render_template('storeList.html')
+
+
+@bp.route('/storeDetails', methods=['GET'])
+def detail():
+    return render_template('storeDetail.html')
