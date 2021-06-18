@@ -17,6 +17,9 @@
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!--    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>-->
+    <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7423270f762fc6a542627133d1c20a84&libraries=services"></script>
+
     <!-- 쿠키 사용을 위한 Jquery-cookie 임포트 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -185,7 +188,6 @@
             data: {'title': getParameter},
             success: function (response) {
                 if (response['result'] === 'success') {
-                    console.log(response['store'])
                     $('.wrapper').append(`
 <div class="store-title">
 <div class="title">${response['store']['title']},
@@ -281,7 +283,7 @@ ${response['store']['convenience']}</div>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     {% if login is true %}
-<!--                    <a class="dropdown-item" data-toggle="modal" data-target="#mypageModalCenter">마이페이지</a>-->
+                    <!--                    <a class="dropdown-item" data-toggle="modal" data-target="#mypageModalCenter">마이페이지</a>-->
                     <a class="dropdown-item" onclick="logOut()">로그아웃</a>
                     {% else %}
                     <a class="dropdown-item" data-toggle="modal" data-target="#registerModalCenter">회원가입</a>
@@ -362,8 +364,6 @@ ${response['store']['convenience']}</div>
     </div>
     <h2 class="location">위치</h2>
     <div id="map" style="width:100%;height:350px;"></div>
-    <script type="text/javascript"
-            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7423270f762fc6a542627133d1c20a84&libraries=services"></script>
     <footer>
         <div class="footer-info">
             © 2021 3조 갬성카페, 정용수, 조미솔, 진수민, 최수빈.
