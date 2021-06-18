@@ -14,18 +14,23 @@ def index():
     token = request.cookies.get('loginToken')
     login = False
     if token:
-        print('token true')
         login = True
-    else:
-        print('token false')
     return render_template('index.html', login=login)
 
 
 @bp.route('/storePage', methods=['GET'])
 def store():
-    return render_template('storeList.html')
+    token = request.cookies.get('loginToken')
+    login = False
+    if token:
+        login = True
+    return render_template('storeList.html', login=login)
 
 
 @bp.route('/storeDetails', methods=['GET'])
 def detail():
-    return render_template('storeDetail.html')
+    token = request.cookies.get('loginToken')
+    login = False
+    if token:
+        login = True
+    return render_template('storeDetail.html', login=login)

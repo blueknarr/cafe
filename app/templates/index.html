@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Gamsung Cafe</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -264,7 +264,6 @@
         }
 
         function login() {
-            alert('login')
             let id = $('#userId').val();
             let pw = $('#userPw').val();
             $.ajax({
@@ -273,7 +272,6 @@
                 data: {'id': id, 'pw': pw},
                 success: function (response) {
                     if (response['result'] === 'success') {
-                        alert('success')
                         $.cookie('loginToken', response['token']);
                         window.location.href = '/'
                     } else {
@@ -281,6 +279,10 @@
                     }
                 }
             })
+        }
+        function logOut(){
+            $.removeCookie('loginToken',{path:'/'})
+            window.location.href ='/'
         }
     </script>
 </head>
@@ -299,8 +301,8 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     {% if login is true %}
-                    <a class="dropdown-item" data-toggle="modal" data-target="#mypageModalCenter">마이페이지</a>
-                    <a class="dropdown-item" data-toggle="modal" data-target="#logoutModalCenter">로그아웃</a>
+<!--                    <a class="dropdown-item" data-toggle="modal" data-target="#mypageModalCenter">마이페이지</a>-->
+                    <a class="dropdown-item" onclick="logOut()">로그아웃</a>
                     {% else %}
                     <a class="dropdown-item" data-toggle="modal" data-target="#registerModalCenter">회원가입</a>
                     <a class="dropdown-item" data-toggle="modal" data-target="#loginModalCenter">로그인</a>
