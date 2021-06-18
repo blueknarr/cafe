@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Gamsung Cafe</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -175,8 +175,8 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     {% if login is true %}
-                    <a class="dropdown-item" data-toggle="modal" data-target="#mypageModalCenter">마이페이지</a>
-                    <a class="dropdown-item" data-toggle="modal" data-target="#logoutModalCenter">로그아웃</a>
+<!--                    <a class="dropdown-item" data-toggle="modal" data-target="#mypageModalCenter">마이페이지</a>-->
+                    <a class="dropdown-item" onclick="logOut()">로그아웃</a>
                     {% else %}
                     <a class="dropdown-item" data-toggle="modal" data-target="#registerModalCenter">회원가입</a>
                     <a class="dropdown-item" data-toggle="modal" data-target="#loginModalCenter">로그인</a>
@@ -273,16 +273,16 @@
     let getParameter = decodeURI(getUserName[1])
     let stores = []
 
-    $('.store-info').on('click','div', function (e) {
+    $('.store-info').on('click', 'div', function (e) {
         let title = $(this).text();
         e.stopPropagation();
 
         $.ajax({
-            type:'GET',
-            url:'/storeDetails',
-            data:{},
-            success:function () {
-                window.location.href = '/storeDetails?title='+title
+            type: 'GET',
+            url: '/storeDetails',
+            data: {},
+            success: function () {
+                window.location.href = '/storeDetails?title=' + title
             }
         })
     });
@@ -360,6 +360,11 @@
             }
         }
     });
+
+    function logOut() {
+        $.removeCookie('loginToken', {path: '/'})
+        window.location.href = '/'
+    }
 </script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Gamsung Cafe</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -259,6 +259,11 @@ ${response['store']['convenience']}</div>
                 }
             }
         })
+
+        function logOut() {
+            $.removeCookie('loginToken', {path: '/'})
+            window.location.href = '/'
+        }
     </script>
 </head>
 <body>
@@ -276,8 +281,8 @@ ${response['store']['convenience']}</div>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     {% if login is true %}
-                    <a class="dropdown-item" data-toggle="modal" data-target="#mypageModalCenter">마이페이지</a>
-                    <a class="dropdown-item" data-toggle="modal" data-target="#logoutModalCenter">로그아웃</a>
+<!--                    <a class="dropdown-item" data-toggle="modal" data-target="#mypageModalCenter">마이페이지</a>-->
+                    <a class="dropdown-item" onclick="logOut()">로그아웃</a>
                     {% else %}
                     <a class="dropdown-item" data-toggle="modal" data-target="#registerModalCenter">회원가입</a>
                     <a class="dropdown-item" data-toggle="modal" data-target="#loginModalCenter">로그인</a>
