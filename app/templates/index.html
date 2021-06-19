@@ -1,475 +1,493 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>Gamsung Cafe</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gamsung Cafe</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- 쿠키 사용을 위한 Jquery-cookie 임포트 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <!-- JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- 쿠키 사용을 위한 Jquery-cookie 임포트 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
 
-    <!-- 구글폰트 -->
-    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
-    <style type="text/css">
-        * {
-            font-family: 'Open Sans', sans-serif;
-        }
+        <!-- 구글폰트 -->
+        <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
 
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
+        <style type="text/css">
+            * {
+                font-family: 'Open Sans', sans-serif;
+            }
 
-        .container {
-            width: 100%;
-        }
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
 
-        header {
-            height: 80px;
-            width: 100%;
-        }
+            .container {
+                width: 100%;
 
-        .header-d1 {
-            float: left;
-            width: 20%;
-            height: 100%;
-        }
+            }
 
-        .header-d2 {
-            float: left;
-            width: 60%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-        }
+            header {
+                height: 80px;
+                width: 100%;
+                background: #f8f9fa;
+            }
 
-        .header-d2 > a {
-            text-decoration: none;
-            font-size: 200%;
-            color: grey;
-        }
+            .header-d1 {
+                float: left;
+                width: 20%;
+                height: 100%;
+            }
 
-        .header-d3 {
-            float: left;
-            width: 20%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-        }
+            .header-d2 {
+                float: left;
+                width: 60%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
 
-        .input-login {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: 40px;
-            margin: 0 0 8px;
-            padding: 5px 39px 5px 11px;
-            border: solid 1px #dadada
-            backgroud: #fff;
-            box-sizing: border-box;
-        }
+            .header-d2 > a {
+                text-decoration: none;
+                font-size: 200%;
+                color: grey;
+            }
 
-        .btn-login {
-            width: 100%;
-            border: none;
-            bordor-radius: 0;
-            background-color: #03c75a;
-        }
+            .header-d3 {
+                float: left;
+                width: 20%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
 
-        .result-check {
-            color: red;
-            padding: 5px;
-        }
+            .logo {
+                font-family: 'Caveat', cursive;
+            }
 
-        .nav-img {
-            width: 100%;
-            height: 300px;
-            margin-bottom: 10px;
-        }
+            .input-login {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                height: 40px;
+                margin: 0 0 8px;
+                padding: 5px 39px 5px 11px;
+                border: solid 1px #dadada;
+                backgroud: #fff;
+                box-sizing: border-box;
+            }
 
-        .banner-img {
-            width: 100%;
-            height: 300px;
-            border-radius: 7px;
+            .btn-login {
+                width: 100%;
+                border: none;
+                bordor-radius: 0;
+                background-color: #03c75a;
+            }
 
-        }
+            .result-check {
+                color: red;
+                padding: 5px;
+            }
 
-        nav {
-            height: 160px;
-            width: 100%;
-            margin-bottom: 10px;
-        }
+            .nav-img {
+                width: 100%;
+                height: 250px;
+                background-image: url("https://cdn.pixabay.com/photo/2015/10/12/15/11/cafe-984275_960_720.jpg");
+                background-size: 550px;
+            }
 
-        .place-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            text-align: center;
-        }
+            .banner-img {
+                width: 100%;
+                height: 300px;
+                border-radius: 7px;
 
-        .place-box {
-            width: 24%;
-            height: 80%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            margin-top: 18px;
-        }
+            }
 
-        .place-box > div {
-            float: left;
-        }
+            nav {
+                height: 180px;
+                width: 100%;
+                background: #f8f9fa;
+            }
 
-        .place-img {
-            width: 75px;
-            height: 70px;
-            border-radius: 7px;
-            cursor: pointer;
-        }
+            .place-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                text-align: center;
+            }
 
-        section {
-            height: 240px;
-            width: 100%;
-        }
+            .place-box {
+                width: 24%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                margin-top: 18px;
+            }
 
-        .theme-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            text-align: center;
-        }
+            .place-box > div {
+                float: left;
+            }
 
-        .theme-box {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            width: 24%
-        }
+            .place-img {
+                width: 100px;
+                height: 100px;
+                border-radius: 7px;
+                cursor: pointer;
+            }
 
-        .theme-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 7px;
-            cursor: pointer;
-        }
+            section {
+                height: 270px;
+                width: 100%;
+                background: #f8f9fa;
+            }
 
-        footer {
-            height: 100px;
-            width: 100%;
-            background-color: #F7F7F7 !important;
-            border-top: 1px solid #DDDDDD !important;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-        }
-    </style>
-    <script>
-        let idValidCheck = false
+            .theme-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                text-align: center;
+            }
 
-        function getStoreList(place) {
-            $.ajax({
-                type: 'GET',
-                url: '/storePage',
-                success: function () {
-                    window.location.href = '/storePage?location=' + place
+            .theme-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                width: 24%
+            }
+
+            .theme-img {
+                width: 170px;
+                height: 170px;
+                border-radius: 7px;
+                cursor: pointer;
+            }
+
+            footer {
+                height: 50px;
+                width: 100%;
+                background-color: #F7F7F7 !important;
+                border-top: 1px solid #DDDDDD !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .title-name {
+                margin-left: 20px;
+                padding-top: 20px;
+            }
+        </style>
+        <script>
+            let idValidCheck = false
+
+            function getStoreList(place) {
+                $.ajax({
+                    type: 'GET',
+                    url: '/storePage',
+                    success: function () {
+                        window.location.href = '/storePage?location=' + place
+                    }
+                })
+            }
+
+            function placeHongdae() {
+                getStoreList('location+' + $('#hongdae').text())
+            }
+
+            function placeShinchon() {
+                getStoreList('location+' + $('#shinchon').text())
+            }
+
+            function placeSungsu() {
+                getStoreList('location+' + $('#sungsu').text())
+            }
+
+            function placeSangsu() {
+                getStoreList('location+' + $('#sangsu').text())
+            }
+
+            function placeGood() {
+                getStoreList('theme+' + $('#good').text())
+            }
+
+            function placeCozy() {
+                getStoreList('theme+' + $('#cozy').text())
+            }
+
+            function placeMood() {
+                getStoreList('theme+' + $('#mood').text())
+            }
+
+            function placeWork() {
+                getStoreList('theme+' + $('#work').text())
+            }
+
+            function register() {
+                if (idValidCheck) {
+                    let id = $('#registerId').val()
+                    let pw = $('#registerPw').val()
+                    let place = $('.custom-select').val()
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/api/register",
+                        data: {'id': id, 'pw': pw, 'place': place},
+                        success: function (response) {
+                            alert(response['msg'])
+                            window.location = '/'
+                        }
+                    })
                 }
-            })
-        }
+            }
 
-        function placeHongdae() {
-            getStoreList('location+' + $('#hongdae').text())
-        }
-
-        function placeShinchon() {
-            getStoreList('location+' + $('#shinchon').text())
-        }
-
-        function placeSungsu() {
-            getStoreList('location+' + $('#sungsu').text())
-        }
-
-        function placeSangsu() {
-            getStoreList('location+' + $('#sangsu').text())
-        }
-
-        function placeGood() {
-            getStoreList('theme+' + $('#good').text())
-        }
-
-        function placeCozy() {
-            getStoreList('theme+' + $('#cozy').text())
-        }
-
-        function placeMood() {
-            getStoreList('theme+' + $('#mood').text())
-        }
-
-        function placeWork() {
-            getStoreList('theme+' + $('#work').text())
-        }
-
-        function register() {
-            if (idValidCheck) {
+            function checkId() {
                 let id = $('#registerId').val()
-                let pw = $('#registerPw').val()
-                let place = $('.custom-select').val()
 
-                $.ajax({
-                    type: "POST",
-                    url: "/api/register",
-                    data: {'id': id, 'pw': pw, 'place': place},
-                    success: function (response) {
-                        alert(response['msg'])
-                        window.location = '/'
-                    }
-                })
-            }
-        }
-
-        function checkId() {
-            let id = $('#registerId').val()
-
-            if (id.includes('@') && id.includes('.')) {
-                $.ajax({
-                    type: "POST",
-                    url: "/api/checkId",
-                    data: {'id': id},
-                    success: function (response) {
-                        $('#span-id').text(`${response['msg']}`)
-                        idValidCheck = true
-                    }
-                })
-            } else {
-                $('#span-id').text('이메일 형식이 아닙니다.')
-            }
-
-        }
-
-        function login() {
-            let id = $('#userId').val();
-            let pw = $('#userPw').val();
-            $.ajax({
-                type: "POST",
-                url: "/api/login",
-                data: {'id': id, 'pw': pw},
-                success: function (response) {
-                    if (response['result'] === 'success') {
-                        $.cookie('loginToken', response['token']);
-                        window.location.href = '/'
-                    } else {
-                        alert("아이디와 패스워드를 확인해주세요.")
-                    }
+                if (id.includes('@') && id.includes('.')) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/api/checkId",
+                        data: {'id': id},
+                        success: function (response) {
+                            $('#span-id').text(`${response['msg']}`)
+                            idValidCheck = true
+                        }
+                    })
+                } else {
+                    $('#span-id').text('이메일 형식이 아닙니다.')
                 }
-            })
-        }
-        function logOut(){
-            $.removeCookie('loginToken',{path:'/'})
-            window.location.href ='/'
-        }
-    </script>
-</head>
-<body>
-<div class="container">
-    <header>
-        <div class="header-d1"></div>
-        <div class="header-d2">
-            <a href="/" class="logo">GAMSUNG CAFE</a>
-        </div>
-        <div class="header-d3">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    계정
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    {% if login is true %}
-<!--                    <a class="dropdown-item" data-toggle="modal" data-target="#mypageModalCenter">마이페이지</a>-->
-                    <a class="dropdown-item" onclick="logOut()">로그아웃</a>
-                    {% else %}
-                    <a class="dropdown-item" data-toggle="modal" data-target="#registerModalCenter">회원가입</a>
-                    <a class="dropdown-item" data-toggle="modal" data-target="#loginModalCenter">로그인</a>
-                    {% endif %}
+
+            }
+
+            function login() {
+                let id = $('#userId').val();
+                let pw = $('#userPw').val();
+                $.ajax({
+                    type: "POST",
+                    url: "/api/login",
+                    data: {'id': id, 'pw': pw},
+                    success: function (response) {
+                        if (response['result'] === 'success') {
+                            $.cookie('loginToken', response['token']);
+                            window.location.href = '/'
+                        } else {
+                            alert("아이디와 패스워드를 확인해주세요.")
+                        }
+                    }
+                })
+            }
+
+            function logOut() {
+                $.removeCookie('loginToken', {path: '/'})
+                window.location.href = '/'
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="header-d1"></div>
+                <div class="header-d2">
+                    <a href="/" class="logo">GAMSUNG CAFE</a>
                 </div>
-                <!-- loginModal -->
-                <div class="modal fade" id="loginModalCenter" tabindex="-1" role="dialog"
-                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">로그인</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div>
-                                    <input type="text" class="input-login" id="userId" placeholder="아이디를 입력하세요.">
+                <div class="header-d3">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            계정
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            {% if login is true %}
+                                <!--                    <a class="dropdown-item" data-toggle="modal" data-target="#mypageModalCenter">마이페이지</a>-->
+                                <a class="dropdown-item" onclick="logOut()">로그아웃</a>
+                            {% else %}
+                                <a class="dropdown-item" data-toggle="modal" data-target="#registerModalCenter">회원가입</a>
+                                <a class="dropdown-item" data-toggle="modal" data-target="#loginModalCenter">로그인</a>
+                            {% endif %}
+                        </div>
+                        <!-- loginModal -->
+                        <div class="modal fade" id="loginModalCenter" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">로그인</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div>
+                                            <input type="text" class="input-login" id="userId"
+                                                   placeholder="아이디를 입력하세요.">
+                                        </div>
+                                        <div>
+                                            <input type="password" class="input-login" id="userPw"
+                                                   placeholder="비밀번호를 입력하세요.">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <!--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>-->
+                                        <button type="button" class="btn btn-primary btn-login" onclick="login()">로그인
+                                        </button>
+                                    </div>
                                 </div>
-                                <div>
-                                    <input type="password" class="input-login" id="userPw" placeholder="비밀번호를 입력하세요.">
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <!--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>-->
-                                <button type="button" class="btn btn-primary btn-login" onclick="login()">로그인</button>
                             </div>
                         </div>
+                        <!-- registerModal -->
+                        <div class="modal fade" id="registerModalCenter" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exModalLongTitle">회원가입</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="check-id">
+                                            <input type="text" class="input-login" id="registerId" onblur="checkId()"
+                                                   placeholder="아이디를 입력하세요.">
+                                            <span class="result-check" id="span-id"></span>
+                                        </div>
+                                        <div>
+                                            <input type="password" class="input-login" id="registerPw"
+                                                   placeholder="비밀번호를 입력하세요.">
+                                        </div>
+                                        <div>
+                                            <select class="custom-select">
+                                                <option selected>-- 지역을 선택해 주세요. --</option>
+                                                <option value="홍대">홍대</option>
+                                                <option value="상수">상수</option>
+                                                <option value="신촌">신촌</option>
+                                                <option value="성수">성수</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <!--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>-->
+                                        <button type="button" class="btn btn-primary btn-login" onclick="register()">
+                                            회원가입
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <!-- registerModal -->
-                <div class="modal fade" id="registerModalCenter" tabindex="-1" role="dialog"
-                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exModalLongTitle">회원가입</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div id="check-id">
-                                    <input type="text" class="input-login" id="registerId" onblur="checkId()"
-                                           placeholder="아이디를 입력하세요.">
-                                    <span class="result-check" id="span-id"></span>
-                                </div>
-                                <div>
-                                    <input type="password" class="input-login" id="registerPw"
-                                           placeholder="비밀번호를 입력하세요.">
-                                </div>
-                                <div>
-                                    <select class="custom-select">
-                                        <option selected>-- 지역을 선택해 주세요. --</option>
-                                        <option value="홍대">홍대</option>
-                                        <option value="상수">상수</option>
-                                        <option value="신촌">신촌</option>
-                                        <option value="성수">성수</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <!--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>-->
-                                <button type="button" class="btn btn-primary btn-login" onclick="register()">회원가입
-                                </button>
-                            </div>
+            </header>
+            <div class="nav-img">
+            </div>
+            <nav>
+                <div class="title-name"><h5>장소별 카페 둘러보기</h5></div>
+                <div class="place-container">
+                    <div class="place-box">
+                        <div>
+                            <img class="place-img"
+                                 src="http://t1.daumcdn.net/liveboard/dailylife/2f1dc2c0dddf4e9f9eb6e2f8f4d35826.JPG"
+                                 onclick="placeHongdae()" alt="">
+                        </div>
+                        <div id="hongdae">홍대</div>
+                    </div>
+                    <div class="place-box">
+                        <div>
+                            <img class="place-img"
+                                 src="http://t1.daumcdn.net/liveboard/dailylife/526d3d2621ec46d1b5ad081f25063774.jpg"
+                                 onclick="placeShinchon()" alt="">
+                        </div>
+                        <div id="shinchon">신촌</div>
+                    </div>
+                    <div class="place-box">
+                        <div>
+                            <img class="place-img"
+                                 src="data:image/jpeg;base64,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"
+                                 onclick="placeSangsu()" alt="">
+                        </div>
+                        <div id="sangsu">상수</div>
+                    </div>
+                    <div class="place-box">
+                        <div>
+                            <img class="place-img"
+                                 src="https://mp-seoul-image-production-s3.mangoplate.com/mango_pick/5nvzjlzgjfum_m.jpg"
+                                 onclick="placeSungsu()" alt="">
+                        </div>
+                        <div id="sungsu">성수</div>
+                    </div>
+                </div>
+            </nav>
+            <section>
+                <div class="title-name"><h5>맞춤 테마 카페</h5></div>
+                <div class="theme-container">
+                    <div class="theme-box">
+                        <div>
+                            <img class="theme-img"
+                                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAxMjdfMjgz%2FMDAxNTgwMTE3MzI5MTA5.3c0UAAxoRKGuz4j6jusuBn2wHvEH4ge9loI-7Dpck9Qg.BtstWIpqdhH-FLy7qF8AVjbDEuTEF8lL5RafQCOhbj0g.JPEG.qhdus2968%2FIMG_8482.jpg&type=a340"
+                                 onclick="placeGood()" alt="">
+                        </div>
+                        <div>
+                            #<span id="good">편안한</span>
+                        </div>
+                    </div>
+                    <div class="theme-box">
+                        <div>
+                            <img class="theme-img"
+                                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDEyMDNfMjI2%2FMDAxNjA2OTk2MjE3OTUy.FRLxZ6uoz53Vo1jsq4TaegiS-CvXVjeQPmyib9gGKGkg.lKiTrbxzKeN4zr_qmk9R0DBX6szsQps1tGiFs2E7NPsg.JPEG.leehyowon10%2FIMG_7919.jpg&type=sc960_832"
+                                 onclick="placeCozy()" alt="">
+                        </div>
+                        <div>
+                            #<span id="cozy">아늑한</span>
+                        </div>
+                    </div>
+                    <div class="theme-box">
+                        <div>
+                            <img class="theme-img"
+                                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA2MThfMjA0%2FMDAxNjIzOTg2MTQ5MzQ1.OMKd9mskRcG8WCpoj34oLn-msJNNL_9mwCMntg_q6TUg.6dgMQJ0c0TP5UQnIzmeywEP15hJJ57Z3BHxmas4W0ykg.JPEG.crd9456%2FKakaoTalk_20210614_145124827_19.jpg&type=a340"
+                                 onclick="placeMood()" alt="">
+                        </div>
+                        <div>
+                            #<span id="mood">분위기있는</span>
+                        </div>
+                    </div>
+                    <div class="theme-box">
+                        <div>
+                            <img class="theme-img"
+                                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAzMzFfMjg4%2FMDAxNjE3MTE5MTYwOTUw.9Ow3WwzB9-PcXw8YyZvCK2VMPT7uBoOD9CPLL7_aHjcg.oWN8H54EbfHVf2ilPwPzlB_R2F4ZT2lu8oUj6rnSwS4g.JPEG.hyeoni0022%2FIMG_6880.JPG&type=sc960_832"
+                                 onclick="placeWork()" alt="">
+                        </div>
+                        <div>
+                            #<span id="work">작업하기좋은</span>
                         </div>
                     </div>
                 </div>
 
-            </div>
+            </section>
+            <footer>
+                <div class="footer-info">
+                    © 2021 3조 갬성카페, 정용수, 조미솔, 진수민, 최수빈.
+                </div>
+            </footer>
         </div>
-    </header>
-    <div class="nav-img">
-        <img class="banner-img"
-             src="https://tour.gb.go.kr/file/thumbnail.do?img_physical=2020102611285246.jpg"
-             alt="">
-    </div>
-    <nav>
-        <div><h3>장소별 카페 둘러보기</h3></div>
-        <div class="place-container">
-            <div class="place-box">
-                <div>
-                    <img class="place-img"
-                         src="http://t1.daumcdn.net/liveboard/dailylife/2f1dc2c0dddf4e9f9eb6e2f8f4d35826.JPG"
-                         onclick="placeHongdae()" alt="">
-                </div>
-                <div id="hongdae">홍대</div>
-            </div>
-            <div class="place-box">
-                <div>
-                    <img class="place-img"
-                         src="http://t1.daumcdn.net/liveboard/dailylife/526d3d2621ec46d1b5ad081f25063774.jpg"
-                         onclick="placeShinchon()" alt="">
-                </div>
-                <div id="shinchon">신촌</div>
-            </div>
-            <div class="place-box">
-                <div>
-                    <img class="place-img"
-                         src="data:image/jpeg;base64,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"
-                         onclick="placeSangsu()" alt="">
-                </div>
-                <div id="sangsu">상수</div>
-            </div>
-            <div class="place-box">
-                <div>
-                    <img class="place-img"
-                         src="https://mp-seoul-image-production-s3.mangoplate.com/mango_pick/5nvzjlzgjfum_m.jpg"
-                         onclick="placeSungsu()" alt="">
-                </div>
-                <div id="sungsu">성수</div>
-            </div>
-        </div>
-    </nav>
-    <section>
-        <div><h3>분위기별 카페 둘러보기</h3></div>
-        <div class="theme-container">
-            <div class="theme-box">
-                <div>
-                    <img class="theme-img"
-                         src="https://ms-housing.kr/data/file/commercial_gallery/3068357811_WQNdHgPi_d91d0c295a62992cfa19f80e166b77cb77c8f889.jpg"
-                         onclick="placeGood()" alt="">
-                </div>
-                <div>
-                    <span id="good">편안한 분위기</span>
-                </div>
-            </div>
-            <div class="theme-box">
-                <div>
-                    <img class="theme-img"
-                         src="https://post-phinf.pstatic.net/MjAxODEwMTJfMjcg/MDAxNTM5MzE0MzE3NzM5.Evf4WRv3C1V_0KdMLi_P462rJ9UKYdrCE7h9hDjh23Mg.nWNWW1SPMBB0tBVx2KrOA3rJ82UB0IL7L9wQovXcf0Ug.JPEG/image_1765161771539314122462.jpg?type=w1200"
-                         onclick="placeCozy()" alt="">
-                </div>
-                <div>
-                    <span id="cozy">아늑한</span>
-                </div>
-            </div>
-            <div class="theme-box">
-                <div>
-                    <img class="theme-img"
-                         src="https://dnvefa72aowie.cloudfront.net/capri/smb/202012/4cccbce9deace1c2bb2450efd5cd286a54af0daa7651870c41.jpeg?q=95&s=1440x1440&t=inside"
-                         onclick="placeMood()" alt="">
-                </div>
-                <div>
-                    <span id="mood">분위기있는</span>
-                </div>
-            </div>
-            <div class="theme-box">
-                <div>
-                    <img class="theme-img"
-                         src="https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/guest/image/2cZNAkQA-SAlk4EkAbRdIuqpQLw.jpg"
-                         onclick="placeWork()" alt="">
-                </div>
-                <div>
-                    <span id="work">작업하기좋은</span>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <footer>
-        <div class="footer-info">
-            © 2021 3조 갬성카페, 정용수, 조미솔, 진수민, 최수빈.
-        </div>
-    </footer>
-</div>
-</body>
+    </body>
 </html>
