@@ -1,313 +1,323 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>Gamsung Cafe</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gamsung Cafe</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!--    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>-->
-    <!-- 쿠키 사용을 위한 Jquery-cookie 임포트 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <!-- JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!--    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>-->
+        <!-- 쿠키 사용을 위한 Jquery-cookie 임포트 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
 
-    <!-- 구글폰트 -->
-    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
-    <style type="text/css">
-        * {
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-
-        .container {
-            width: 100%;
-        }
-
-        header {
-            height: 80px;
-            width: 100%;
-            border-bottom: 1px solid #DDDDDD !important
-        }
-
-        .header-d1 {
-            float: left;
-            width: 20%;
-            height: 100%;
-        }
-
-        .header-d2 {
-            float: left;
-            width: 60%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .header-d2 > a {
-            text-decoration: none;
-            font-size: 200%;
-            color: grey;
-        }
-
-        .header-d3 {
-            float: left;
-            width: 20%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .input-login {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: 40px;
-            margin: 0 0 8px;
-            padding: 5px 39px 5px 11px;
-            border: solid 1px #dadada;
-            backgroud: #fff;
-            box-sizing: border-box;
-        }
-
-        .btn-login {
-            width: 100%;
-            border: none;
-            bordor-radius: 0;
-            background-color: #03c75a;
-        }
-
-        .result-check {
-            color: red;
-            padding: 5px;
-        }
-
-        .wrapper {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .store-info {
-            height: 500px;
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            overflow: scroll;
-        }
-
-        .store-container {
-            margin: 0px 5px 5px 15px;
-            width: 90%;
-            height: 40%;
-        }
-
-        .store-img {
-            width: 30%;
-            height: 75px;
-            float: left;
-        }
-
-        .store-thumb {
-            height: 100%;
-            width: 100%;
-        }
-
-        .title {
-            cursor: pointer;
-        }
-
-        .store-content {
-            width: 70%;
-            float: left;
-        }
-
-        .info {
-            height: 500px;
-            width: 60%;
-        }
-
-        footer {
-            height: 100px;
-            width: 100%;
-            background-color: #F7F7F7 !important;
-            border-top: 1px solid #DDDDDD !important;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-    <header>
-        <div class="header-d1"></div>
-        <div class="header-d2">
-            <a href="/">GAMSUNG CAFE</a>
-        </div>
-        <div class="header-d3">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    계정
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    {% if login is true %}
-<!--                    <a class="dropdown-item" data-toggle="modal" data-target="#mypageModalCenter">마이페이지</a>-->
-                    <a class="dropdown-item" onclick="logOut()">로그아웃</a>
-                    {% else %}
-                    <a class="dropdown-item" data-toggle="modal" data-target="#registerModalCenter">회원가입</a>
-                    <a class="dropdown-item" data-toggle="modal" data-target="#loginModalCenter">로그인</a>
-                    {% endif %}
-                </div>
-                <!-- loginModal -->
-                <div class="modal fade" id="loginModalCenter" tabindex="-1" role="dialog"
-                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">로그인</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div>
-                                    <input type="text" class="input-login" id="userId" placeholder="아이디를 입력하세요.">
-                                </div>
-                                <div>
-                                    <input type="password" class="input-login" id="userPw" placeholder="비밀번호를 입력하세요.">
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <!--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>-->
-                                <button type="button" class="btn btn-primary btn-login" onclick="login()">로그인</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- registerModal -->
-                <div class="modal fade" id="registerModalCenter" tabindex="-1" role="dialog"
-                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exModalLongTitle">회원가입</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div id="check-id">
-                                    <input type="text" class="input-login" id="registerId" onblur="checkId()"
-                                           placeholder="아이디를 입력하세요.">
-                                    <span class="result-check" id="span-id"></span>
-                                </div>
-                                <div>
-                                    <input type="password" class="input-login" id="registerPw"
-                                           placeholder="비밀번호를 입력하세요.">
-                                </div>
-                                <div>
-                                    <select class="custom-select">
-                                        <option selected>-- 지역을 선택해 주세요. --</option>
-                                        <option value="홍대">홍대</option>
-                                        <option value="상수">상수</option>
-                                        <option value="강남">강남</option>
-                                        <option value="성수">성수</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <!--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>-->
-                                <button type="button" class="btn btn-primary btn-login" onclick="register()">회원가입
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </header>
-    <div class="wrapper">
-        <div class="store-info">
-
-        </div>
-        <div class="info">
-            <div id="map" style="width:100%;height:499px;"></div>
-        </div>
-    </div>
-    <footer>
-        <div class="footer-info">
-            © 2021 3조 갬성카페, 정용수, 조미솔, 진수민, 최수빈.
-        </div>
-    </footer>
-</div>
-<script type="text/javascript"
-        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7423270f762fc6a542627133d1c20a84&libraries=services"></script>
-<script>
-    let getLink = window.location.search;
-    let getUserName = getLink.split('=')
-    let getParameter = decodeURI(getUserName[1])
-    let stores = []
-
-    $('.store-info').on('click', 'div', function (e) {
-        let title = $(this).text();
-        e.stopPropagation();
-
-        $.ajax({
-            type: 'GET',
-            url: '/storeDetails',
-            data: {},
-            success: function () {
-                window.location.href = '/storeDetails?title=' + title
+        <!-- 구글폰트 -->
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+        <style type="text/css">
+            * {
+                font-family: 'Open Sans', sans-serif;
             }
-        })
-    });
 
-    $.ajax({
-        type: 'POST',
-        url: '/store/list',
-        data: {'parameter': getParameter},
-        success: function (response) {
-            let stores = response['stores']
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
 
-            //중심 좌표값 구해야함
-            var mapContainer = document.getElementById('map'), // 지도를 표시할 div
-                mapOption = {
-                    center: new kakao.maps.LatLng(37.5568904093718, 126.923674307594), // 지도의 중심좌표
-                    level: 5 // 지도의 확대 레벨
-                };
-            // 지도를 생성합니다
-            var map = new kakao.maps.Map(mapContainer, mapOption);
-            // 주소-좌표 변환 객체를 생성합니다
-            var geocoder = new kakao.maps.services.Geocoder();
+            .container {
+                width: 100%;
+            }
 
-            for (let i of stores) {
-                //div 매장 정보 append하고 나서 맵 생성
-                $('.store-info').append(`
+            header {
+                height: 80px;
+                width: 100%;
+                border-bottom: 1px solid #DDDDDD !important
+            }
+
+            .header-d1 {
+                float: left;
+                width: 20%;
+                height: 100%;
+            }
+
+            .header-d2 {
+                float: left;
+                width: 60%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .header-d2 > a {
+                text-decoration: none;
+                font-size: 200%;
+                color: grey;
+            }
+
+            .header-d3 {
+                float: left;
+                width: 20%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .input-login {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                height: 40px;
+                margin: 0 0 8px;
+                padding: 5px 39px 5px 11px;
+                border: solid 1px #dadada;
+                backgroud: #fff;
+                box-sizing: border-box;
+            }
+
+            .btn-login {
+                width: 100%;
+                border: none;
+                bordor-radius: 0;
+                background-color: #03c75a;
+            }
+
+            .result-check {
+                color: red;
+                padding: 5px;
+            }
+
+            .wrapper {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .store-info {
+                height: 500px;
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                overflow: scroll;
+            }
+
+            .store-container {
+                margin: 0px 5px 5px 15px;
+                width: 90%;
+                height: 40%;
+            }
+
+            .store-img {
+                width: 30%;
+                height: 75px;
+                float: left;
+            }
+
+            .store-thumb {
+                height: 100%;
+                width: 100%;
+            }
+
+            .title {
+                cursor: pointer;
+            }
+
+            .store-content {
+                width: 70%;
+                float: left;
+            }
+
+            .info {
+                height: 500px;
+                width: 60%;
+            }
+
+            footer {
+                height: 100px;
+                width: 100%;
+                background-color: #F7F7F7 !important;
+                border-top: 1px solid #DDDDDD !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .logo {
+                font-family: 'Caveat', cursive;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="header-d1"></div>
+                <div class="header-d2">
+                    <a href="/" class="logo">GAMSUNG CAFE</a>
+                </div>
+                <div class="header-d3">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            계정
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            {% if login is true %}
+                                <!--                    <a class="dropdown-item" data-toggle="modal" data-target="#mypageModalCenter">마이페이지</a>-->
+                                <a class="dropdown-item" onclick="logOut()">로그아웃</a>
+                            {% else %}
+                                <a class="dropdown-item" data-toggle="modal" data-target="#registerModalCenter">회원가입</a>
+                                <a class="dropdown-item" data-toggle="modal" data-target="#loginModalCenter">로그인</a>
+                            {% endif %}
+                        </div>
+                        <!-- loginModal -->
+                        <div class="modal fade" id="loginModalCenter" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">로그인</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div>
+                                            <input type="text" class="input-login" id="userId"
+                                                   placeholder="아이디를 입력하세요.">
+                                        </div>
+                                        <div>
+                                            <input type="password" class="input-login" id="userPw"
+                                                   placeholder="비밀번호를 입력하세요.">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <!--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>-->
+                                        <button type="button" class="btn btn-primary btn-login" onclick="login()">로그인
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- registerModal -->
+                        <div class="modal fade" id="registerModalCenter" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exModalLongTitle">회원가입</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="check-id">
+                                            <input type="text" class="input-login" id="registerId" onblur="checkId()"
+                                                   placeholder="아이디를 입력하세요.">
+                                            <span class="result-check" id="span-id"></span>
+                                        </div>
+                                        <div>
+                                            <input type="password" class="input-login" id="registerPw"
+                                                   placeholder="비밀번호를 입력하세요.">
+                                        </div>
+                                        <div>
+                                            <select class="custom-select">
+                                                <option selected>-- 지역을 선택해 주세요. --</option>
+                                                <option value="홍대">홍대</option>
+                                                <option value="상수">상수</option>
+                                                <option value="강남">강남</option>
+                                                <option value="성수">성수</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <!--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>-->
+                                        <button type="button" class="btn btn-primary btn-login" onclick="register()">
+                                            회원가입
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+            <div class="wrapper">
+                <div class="store-info">
+
+                </div>
+                <div class="info">
+                    <div id="map" style="width:100%;height:499px;"></div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer-info">
+                    © 2021 3조 갬성카페, 정용수, 조미솔, 진수민, 최수빈.
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript"
+                src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7423270f762fc6a542627133d1c20a84&libraries=services"></script>
+        <script>
+            let getLink = window.location.search;
+            let getUserName = getLink.split('=')
+            let getParameter = decodeURI(getUserName[1])
+            let stores = []
+
+            $('.store-info').on('click', 'div', function (e) {
+                let title = $(this).text();
+                e.stopPropagation();
+
+                $.ajax({
+                    type: 'GET',
+                    url: '/storeDetails',
+                    data: {},
+                    success: function () {
+                        window.location.href = '/storeDetails?title=' + title
+                    }
+                })
+            });
+
+            $.ajax({
+                type: 'POST',
+                url: '/store/list',
+                data: {'parameter': getParameter},
+                success: function (response) {
+                    let stores = response['stores']
+
+                    //중심 좌표값 구해야함
+                    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+                        mapOption = {
+                            center: new kakao.maps.LatLng(37.5568904093718, 126.923674307594), // 지도의 중심좌표
+                            level: 5 // 지도의 확대 레벨
+                        };
+                    // 지도를 생성합니다
+                    var map = new kakao.maps.Map(mapContainer, mapOption);
+                    // 주소-좌표 변환 객체를 생성합니다
+                    var geocoder = new kakao.maps.services.Geocoder();
+
+                    for (let i of stores) {
+                        //div 매장 정보 append하고 나서 맵 생성
+                        $('.store-info').append(`
               <div class="store-container">
                 <div class="store-img">
                    <img class="store-thumb" src="${i['img_url'][0]}"/>
@@ -323,48 +333,48 @@
                 </div>
               </div>
             `)
-                // 주소로 좌표를 검색합니다
-                geocoder.addressSearch(i['address'], function (result, status) {
-                    // 정상적으로 검색이 완료됐으면
-                    if (status === kakao.maps.services.Status.OK) {
-                        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-                        // 결과값으로 받은 위치를 마커로 표시합니다
-                        var marker = new kakao.maps.Marker({
-                            map: map,
-                            position: coords
+                        // 주소로 좌표를 검색합니다
+                        geocoder.addressSearch(i['address'], function (result, status) {
+                            // 정상적으로 검색이 완료됐으면
+                            if (status === kakao.maps.services.Status.OK) {
+                                var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                                // 결과값으로 받은 위치를 마커로 표시합니다
+                                var marker = new kakao.maps.Marker({
+                                    map: map,
+                                    position: coords
+                                });
+                                // 인포윈도우로 장소에 대한 설명을 표시합니다
+                                var infowindow = new kakao.maps.InfoWindow({
+                                    //content: '<div style="height:50px;width:150px;text-align:center;padding:6px 0;">우리회사</div>'
+                                    content: `<div class="map-div" style="height:50px;width:150px;"><div style="float:left;"><img src="${i['img_url'][0]}" style="height:60px; width:60px;padding:4px 5px 5px 5px;"/></div><div style="float:left;width:90px;padding:7px 2px 2px 2px"><div>${i['title']}</div><div><span style ="color:red;">★</span><span style ="font-size:12px;">${i['review'][0]['rating']}</span><span style="font-size:10px;color:grey;"> 카페</span></div></div></div>`
+                                });
+                                // 마커에 클릭이벤트를 등록합니다
+                                kakao.maps.event.addListener(marker, 'click', function () {
+                                    // 마커 위에 인포윈도우를 표시합니다
+                                    infowindow.open(map, marker);
+                                });
+                                // 마커에 마우스오버 이벤트를 등록합니다
+                                kakao.maps.event.addListener(marker, 'mouseover', function () {
+                                    // 마커에 마우스오버 이벤트가 발생하면 인포윈도우를 마커위에 표시합니다
+                                    infowindow.open(map, marker);
+                                });
+                                // 마커에 마우스아웃 이벤트를 등록합니다
+                                kakao.maps.event.addListener(marker, 'mouseout', function () {
+                                    // 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
+                                    infowindow.close();
+                                });
+                                // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                                map.setCenter(coords);
+                            }
                         });
-                        // 인포윈도우로 장소에 대한 설명을 표시합니다
-                        var infowindow = new kakao.maps.InfoWindow({
-                            //content: '<div style="height:50px;width:150px;text-align:center;padding:6px 0;">우리회사</div>'
-                            content: `<div class="map-div" style="height:50px;width:150px;"><div style="float:left;"><img src="${i['img_url'][0]}" style="height:60px; width:60px;padding:4px 5px 5px 5px;"/></div><div style="float:left;width:90px;padding:7px 2px 2px 2px"><div>${i['title']}</div><div><span style ="color:red;">★</span><span style ="font-size:12px;">${i['review'][0]['rating']}</span><span style="font-size:10px;color:grey;"> 카페</span></div></div></div>`
-                        });
-                        // 마커에 클릭이벤트를 등록합니다
-                        kakao.maps.event.addListener(marker, 'click', function () {
-                            // 마커 위에 인포윈도우를 표시합니다
-                            infowindow.open(map, marker);
-                        });
-                        // 마커에 마우스오버 이벤트를 등록합니다
-                        kakao.maps.event.addListener(marker, 'mouseover', function () {
-                            // 마커에 마우스오버 이벤트가 발생하면 인포윈도우를 마커위에 표시합니다
-                            infowindow.open(map, marker);
-                        });
-                        // 마커에 마우스아웃 이벤트를 등록합니다
-                        kakao.maps.event.addListener(marker, 'mouseout', function () {
-                            // 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
-                            infowindow.close();
-                        });
-                        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
-                        map.setCenter(coords);
                     }
-                });
-            }
-        }
-    });
+                }
+            });
 
-    function logOut() {
-        $.removeCookie('loginToken', {path: '/'})
-        window.location.href = '/'
-    }
-</script>
-</body>
+            function logOut() {
+                $.removeCookie('loginToken', {path: '/'})
+                window.location.href = '/'
+            }
+        </script>
+    </body>
 </html>
