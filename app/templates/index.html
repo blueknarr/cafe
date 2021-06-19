@@ -23,10 +23,11 @@
         <!-- 구글폰트 -->
         <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
         <style type="text/css">
             * {
-                font-family: 'Open Sans', sans-serif;
+                font-family: 'Noto Sans KR', sans-serif;
             }
 
             html, body {
@@ -40,9 +41,10 @@
             }
 
             header {
-                height: 80px;
+                height: 60px;
                 width: 100%;
-                background: #f8f9fa;
+                background: white;
+                box-shadow: 1px 1px 1px 1px grey;
             }
 
             .header-d1 {
@@ -64,7 +66,7 @@
             .header-d2 > a {
                 text-decoration: none;
                 font-size: 200%;
-                color: grey;
+                color: #495057;
             }
 
             .header-d3 {
@@ -79,6 +81,7 @@
 
             .logo {
                 font-family: 'Caveat', cursive;
+                color: black;
             }
 
             .input-login {
@@ -107,7 +110,7 @@
 
             .nav-img {
                 width: 100%;
-                height: 250px;
+                height: 200px;
                 background-image: url("https://cdn.pixabay.com/photo/2015/10/12/15/11/cafe-984275_960_720.jpg");
                 background-size: 550px;
             }
@@ -139,7 +142,6 @@
                 flex-direction: column;
                 justify-content: center;
                 text-align: center;
-                margin-top: 18px;
             }
 
             .place-box > div {
@@ -156,7 +158,7 @@
             section {
                 height: 270px;
                 width: 100%;
-                background: #f8f9fa;
+                background: #f1f3f5;
             }
 
             .theme-container {
@@ -184,7 +186,7 @@
             footer {
                 height: 50px;
                 width: 100%;
-                background-color: #F7F7F7 !important;
+                background-color: #e9ecef !important;
                 border-top: 1px solid #DDDDDD !important;
                 display: flex;
                 flex-direction: column;
@@ -193,8 +195,9 @@
             }
 
             .title-name {
-                margin-left: 20px;
+                margin-left: 40px;
                 padding-top: 20px;
+                font-family: 'Noto Sans KR', sans-serif;
             }
         </style>
         <script>
@@ -440,16 +443,7 @@
             <section>
                 <div class="title-name"><h5>맞춤 테마 카페</h5></div>
                 <div class="theme-container">
-                    <div class="theme-box">
-                        <div>
-                            <img class="theme-img"
-                                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAxMjdfMjgz%2FMDAxNTgwMTE3MzI5MTA5.3c0UAAxoRKGuz4j6jusuBn2wHvEH4ge9loI-7Dpck9Qg.BtstWIpqdhH-FLy7qF8AVjbDEuTEF8lL5RafQCOhbj0g.JPEG.qhdus2968%2FIMG_8482.jpg&type=a340"
-                                 onclick="placeGood()" alt="">
-                        </div>
-                        <div>
-                            #<span id="good">편안한</span>
-                        </div>
-                    </div>
+
                     <div class="theme-box">
                         <div>
                             <img class="theme-img"
@@ -458,6 +452,17 @@
                         </div>
                         <div>
                             #<span id="cozy">아늑한</span>
+                        </div>
+                    </div>
+
+                    <div class="theme-box">
+                        <div>
+                            <img class="theme-img"
+                                 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAxMjdfMjgz%2FMDAxNTgwMTE3MzI5MTA5.3c0UAAxoRKGuz4j6jusuBn2wHvEH4ge9loI-7Dpck9Qg.BtstWIpqdhH-FLy7qF8AVjbDEuTEF8lL5RafQCOhbj0g.JPEG.qhdus2968%2FIMG_8482.jpg&type=a340"
+                                 onclick="placeGood()" alt="">
+                        </div>
+                        <div>
+                            #<span id="good">편안한 분위기</span>
                         </div>
                     </div>
                     <div class="theme-box">
