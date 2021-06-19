@@ -32,9 +32,11 @@
         <!-- 구글폰트 -->
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
         <style type="text/css">
             * {
-                font-family: 'Open Sans', sans-serif;
+                font-family: 'Noto Sans KR', sans-serif;
             }
 
             html, body {
@@ -47,9 +49,11 @@
             }
 
             header {
-                height: 80px;
+                height: 60px;
                 width: 100%;
-                border-bottom: 1px solid #DDDDDD !important
+                border-bottom: 1px solid #DDDDDD !important;
+                background: white;
+                box-shadow: 1px 1px 1px 1px grey;
             }
 
             .header-d1 {
@@ -71,7 +75,7 @@
             .header-d2 > a {
                 text-decoration: none;
                 font-size: 200%;
-                color: grey;
+                color: #495057;
             }
 
             .logo {
@@ -151,7 +155,7 @@
             }
 
             .store-info > div {
-                font-size: 20px;
+                font-size: 17px;
             }
 
             .review {
@@ -160,11 +164,11 @@
             }
 
             .review-id {
-                font-size: 16px;
+                font-size: 15px;
             }
 
             .review-content {
-                font-size: 20px;
+                font-size: 15px;
             }
 
             .location {
@@ -173,9 +177,9 @@
             }
 
             footer {
-                height: 100px;
+                height: 50px;
                 width: 100%;
-                background-color: #F7F7F7 !important;
+                background-color: #e9ecef !important;
                 border-top: 1px solid #DDDDDD !important;
                 display: flex;
                 flex-direction: column;
@@ -232,7 +236,7 @@ ${response['store']['open']}</div>
 ${response['store']['convenience']}</div>
 </div>
 <div class="review">
-<h2>후기 1개</h2>
+<h4>후기 1개</h4>
 <div class="review-id">${response['store']['review'][0]['user']}</div>
 <div class="review-content">${response['store']['review'][0]['content']}</div>
 <div class="review-rating"><span style ="color:red;">★</span><span>${response['store']['review'][0]['rating']},</span>
@@ -373,7 +377,7 @@ ${response['store']['convenience']}</div>
             <div class="wrapper">
 
             </div>
-            <h2 class="location">위치</h2>
+            <h4 class="location">위치</h4>
             <div id="map" style="width:100%;height:350px;"></div>
             <footer>
                 <div class="footer-info">
